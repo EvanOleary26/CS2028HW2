@@ -5,6 +5,7 @@ int main() {
     Create a way to show current money
     Create a way to cash out
     Player needs to be able to set the amount of values on the wheel
+    
     Hard Mode?
     */
 
