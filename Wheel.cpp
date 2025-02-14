@@ -12,6 +12,6 @@ Wheel::Wheel() {
 }
 
 //Functions
-int Wheel::Spin(int wheelSize) {
-    ballVal = (std::rand() % wheelSize) + 1;
+int Wheel::Spin(int min,int max) {
+    ballVal = (std::rand() % max) + 1;
 }

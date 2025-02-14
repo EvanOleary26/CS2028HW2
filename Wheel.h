@@ -18,7 +18,7 @@ class Wheel{
     Wheel();
 
     //Functions
-    int Spin(int WheelSize);
+    int Spin(int min, int max);
 
 
 
