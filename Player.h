@@ -11,13 +11,23 @@ class Player{
     public:
     //Getters
     int getMoney();
+    int getWheel();
 
     //Setters
-    void setMoney(int inVal);
+    void setMoney(int inMoney);
+    void setWheel(int inWheel);
+
+    //Getters
+
+
+//Setters
+
     
     //Constructors
     Player();
-    Player(int inVal);
+    Player(int inMoney);
+
+    int spinWheel(int min,int max);
 };
 
 

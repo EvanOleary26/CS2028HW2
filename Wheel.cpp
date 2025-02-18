@@ -4,7 +4,7 @@
 int Wheel::getWheel(){ return ballVal; }
 
 //Setters
-void Wheel::setWheel(int inVal){ ballVal = inVal; }
+void Wheel::setWheel(int inWheel){ ballVal = inWheel; }
 
 //Constructors
 Wheel::Wheel() { //default constructor
@@ -16,7 +16,6 @@ Wheel::Wheel(int min, int max) { //modified constructor
 }
 
 //Functions 
-
-//int Wheel::Spin(int min,int max) { //do we need this if we have the modified constructor?
-//    ballVal = (std::rand() % max) + 1;
-//}
+int Wheel::Spin(int min,int max) { //do we need this if we have the modified constructor?
+    ballVal = (std::rand() % max) + min;
+}

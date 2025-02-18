@@ -12,7 +12,7 @@ class Wheel{
     int getWheel();
 
     //Setters
-    void setWheel(int inVal){ ballVal = inVal; }
+    void setWheel(int inWheel){ ballVal = inWheel; }
     
     //Constructors
     Wheel(); //default constructor
