@@ -12,14 +12,14 @@ class Wheel{
     int getWheel();
 
     //Setters
-    void setWheel(int inWheel){ ballVal = inWheel; }
+    void setWheel(int inWheel);
     
     //Constructors
     Wheel(); //default constructor
     Wheel(int min, int max); //modified constructor
 
     //Functions
-    int Spin(int min, int max);
+    void Spin(int min, int max);
 
 
 

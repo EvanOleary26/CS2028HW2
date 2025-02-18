@@ -2,11 +2,11 @@
 
 //Getters
 int Player::getMoney(){ return money; }
-int Player::getWheel(){ return wheel.getWheel(); }
+int Player::getPlayerWheel(){ return wheel.getWheel(); }
 
 //Setters
 void Player::setMoney(int inMoney){ money = inMoney; }
-void Player::setWheel(int inWheel){ wheel.setWheel(inWheel); }
+void Player::setPlayerWheel(int inWheel){ wheel.setWheel(inWheel); }
 
 //Constructors
 Player::Player() {
@@ -18,6 +18,6 @@ Player::Player(int inMoney) {
 }
 
 //Functions
-int Player::spinWheel(int min, int max){
-return wheel.Spin(min,max);
+void Player::spinWheel(int min, int max){
+    wheel.Spin(min,max);
 }
