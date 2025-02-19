@@ -16,6 +16,6 @@ Wheel::Wheel(int min, int max) { //modified constructor
 }
 
 //Functions 
-void Wheel::Spin(int min,int max) { //do we need this if we have the modified constructor?
+void Wheel::Spin(int min,int max) {
     ballVal = (std::rand() % max) + min;
 }

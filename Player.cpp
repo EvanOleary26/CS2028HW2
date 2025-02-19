@@ -9,11 +9,11 @@ void Player::setMoney(int inMoney){ money = inMoney; }
 void Player::setPlayerWheel(int inWheel){ wheel.setWheel(inWheel); }
 
 //Constructors
-Player::Player() {
+Player::Player() {  //Default Constructor
     money = 500;
 }
 
-Player::Player(int inMoney) {
+Player::Player(int inMoney) {   
     money = inMoney;
 }
 

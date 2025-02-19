@@ -17,12 +17,6 @@ class Player{
     void setMoney(int inMoney);
     void setPlayerWheel(int inWheel);
 
-    //Getters
-
-
-//Setters
-
-    
     //Constructors
     Player();
     Player(int inMoney);

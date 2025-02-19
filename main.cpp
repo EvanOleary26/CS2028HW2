@@ -2,17 +2,8 @@
 #include "Player.h"
 
 int main() {
-    /*
-    Create a loop for repeating the game
-    Create options for Doubling or Halving
-    Create a way to show current money
-    Create a way to cash out
-    Player needs to be able to set the amount of values on the wheel
-    
-    Hard Mode?
-    */
 
-    //we need to load the player here
+    //Load the player
     Player player;
     int purse = player.getMoney();
     char cashout = ' '; // prompts the user to cash out at the end of each turn
@@ -34,7 +25,7 @@ int main() {
         std::cin >> max;
     }
 
-    //Load House
+    //Load the House
     Wheel house(min,max);
 
     while (purse > 0 || cashout == 'y') {
@@ -53,11 +44,9 @@ int main() {
             std::cout << "You don't have enough in your purse to bet that much. Re-enter a wager: ";
             std::cin >> wager;
         }
-
-        //gameplay goes here
-
+        //Gameplay
         //Spin player ball
-        player.spinWheel(min,max);      //Player Rolls
+        player.spinWheel(min,max);  //Player Rolls
 
         std::cout << "You rolled a " << player.getPlayerWheel() << "..." << std::endl;
 
@@ -78,7 +67,7 @@ int main() {
             //double players wager, spin house's wheel twice, if either is equal or greater than the players spin they win
             wager *= 2;
             for (int i{0}; i < 2; i++){
-                house.Spin(min,max);        //House rolls
+                house.Spin(min,max);    //House rolls
                 std::cout << "The house rolled a " << house.getWheel() << "." << std::endl;
                 if (house.getWheel() >= player.getPlayerWheel()){
                     std::cout << "The house wins..." << std::endl;
@@ -99,7 +88,7 @@ int main() {
             // if the house rolls higher on both the player loses their total bet
             int houseWin = 0;   //track number of house wins
             for (int i{0}; i < 2; i++){
-                house.Spin(min,max);        //House rolls
+                house.Spin(min,max);    //House rolls
                 std::cout << "The house rolled a " << house.getWheel() << "." << std::endl;
                 if (house.getWheel() >= player.getPlayerWheel()){
                     houseWin++;
@@ -115,13 +104,13 @@ int main() {
             }
         } else {
             //No special bet player wins if they roll higher than the house, wager is unchanged
-            house.Spin(min,max);        //House rolls
+            house.Spin(min,max);    //House rolls
             std::cout << "The house rolled a " << house.getWheel() << "." << std::endl;
             if (house.getWheel() >= player.getPlayerWheel()){   //If house wins
                 std::cout << "The house wins..." << std::endl;
                 std::cout << "You lose $" << wager << std::endl;
                 purse -= wager; 
-            } else {                                            //If player wins
+            } else {    //If player wins
                 std::cout << "Congrats you win!" << std::endl;
                 std::cout << "You won $" << wager << std::endl;
                 purse += wager; 
@@ -147,9 +136,5 @@ int main() {
         }
 
     }
-
-
-
-
     return 0;
 }
